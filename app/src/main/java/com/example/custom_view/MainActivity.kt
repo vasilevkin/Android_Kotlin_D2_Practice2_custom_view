@@ -1,4 +1,4 @@
-package com.example.customview
+package com.example.custom_view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
