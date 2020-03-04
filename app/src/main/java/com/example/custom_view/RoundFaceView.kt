@@ -8,7 +8,7 @@ import android.util.AttributeSet
 import android.view.View
 
 
-class RoundButtonView(context: Context, attrs: AttributeSet) : View(context, attrs) {
+class RoundFaceView(context: Context, attrs: AttributeSet) : View(context, attrs) {
 
     companion object {
         private const val INSIDE_COLOR = Color.YELLOW
@@ -43,16 +43,16 @@ class RoundButtonView(context: Context, attrs: AttributeSet) : View(context, att
     private fun setupAttributes(attrs: AttributeSet?) {
         // Obtain a typed array of attributes
         val typedArray = context.theme.obtainStyledAttributes(
-            attrs, R.styleable.RoundButtonView,
+            attrs, R.styleable.RoundFaceView,
             0, 0
         )
 
         // Extract custom attributes into member variables
-        state = typedArray.getInt(R.styleable.RoundButtonView_state, OFF.toInt()).toLong()
-        faceColor = typedArray.getColor(R.styleable.RoundButtonView_faceColor, INSIDE_COLOR)
-        textColor = typedArray.getColor(R.styleable.RoundButtonView_textColor, TEXT_COLOR)
-        borderColor = typedArray.getColor(R.styleable.RoundButtonView_borderColor, BORDER_COLOR)
-        borderWidth = typedArray.getDimension(R.styleable.RoundButtonView_borderWidth, BORDER_WIDTH)
+        state = typedArray.getInt(R.styleable.RoundFaceView_state, OFF.toInt()).toLong()
+        faceColor = typedArray.getColor(R.styleable.RoundFaceView_faceColor, INSIDE_COLOR)
+        textColor = typedArray.getColor(R.styleable.RoundFaceView_textColor, TEXT_COLOR)
+        borderColor = typedArray.getColor(R.styleable.RoundFaceView_borderColor, BORDER_COLOR)
+        borderWidth = typedArray.getDimension(R.styleable.RoundFaceView_borderWidth, BORDER_WIDTH)
 
         // TypedArray objects are shared and must be recycled.
         typedArray.recycle()

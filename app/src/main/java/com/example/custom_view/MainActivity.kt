@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity() {
 
         right_checkable_button.setOnClickListener {
             when (smile_view.state) {
-                RoundButtonView.ON -> smile_view.state = RoundButtonView.OFF
-                RoundButtonView.OFF -> smile_view.state = RoundButtonView.ON
+                RoundFaceView.ON -> smile_view.state = RoundFaceView.OFF
+                RoundFaceView.OFF -> smile_view.state = RoundFaceView.ON
             }
         }
     }
