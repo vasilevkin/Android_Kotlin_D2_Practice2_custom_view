@@ -7,7 +7,31 @@
     android:background="@android:color/darker_gray"
     tools:context=".MainActivity">
 
+    <com.example.custom_view.IndicatorButton
+        android:id="@+id/left_toggle_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="4dp"
+        android:text="Enable ->"
+        app:icon="@drawable/ic_face_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.custom_view.CheckableIndicatorButton
+        android:id="@+id/right_checkable_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="4dp"
+        android:layout_marginStart="8dp"
+        android:elevation="300dp"
+        android:enabled="false"
+        android:text="Smile / Sad"
+        app:icon="@drawable/ic_tag_faces_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.example.custom_view.RoundButtonView
+        android:id="@+id/smile_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -17,23 +41,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.example.custom_view.RoundButtonView
-        android:layout_width="100dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:elevation="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.example.custom_view.RoundButtonView
-        android:layout_width="100dp"
-        android:layout_height="200dp"
-        android:layout_margin="32dp"
-        android:elevation="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.example.custom_view.RoundButtonView
