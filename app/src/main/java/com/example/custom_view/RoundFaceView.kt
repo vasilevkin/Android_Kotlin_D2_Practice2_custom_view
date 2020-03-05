@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Parcelable
 import android.util.AttributeSet
 import android.view.View
+import kotlin.math.min
 
 
 class RoundFaceView(context: Context, attrs: AttributeSet) : View(context, attrs) {
@@ -121,7 +122,7 @@ class RoundFaceView(context: Context, attrs: AttributeSet) : View(context, attrs
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
 
-        size = Math.min(measuredWidth, measuredHeight)
+        size = min(measuredWidth, measuredHeight)
 
         setMeasuredDimension(size, size)
     }

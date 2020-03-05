@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/darker_gray"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="Overdraw">
 
     <com.example.custom_view.IndicatorButton
         android:id="@+id/left_toggle_button"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_margin="4dp"
-        android:text="Enable ->"
+        android:text="@string/left_button_title"
         app:icon="@drawable/ic_face_black_24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,7 +26,7 @@
         android:layout_marginStart="8dp"
         android:elevation="300dp"
         android:enabled="false"
-        android:text="Smile / Sad"
+        android:text="@string/right_button_title"
         app:icon="@drawable/ic_tag_faces_black_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

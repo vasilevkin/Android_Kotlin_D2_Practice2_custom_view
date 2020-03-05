@@ -1,5 +1,6 @@
 package com.example.custom_view
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
@@ -11,6 +12,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.res.use
 import androidx.core.view.children
 import kotlinx.android.synthetic.main.indicator_button.view.*
+import kotlin.math.min
 
 
 open class IndicatorButton @JvmOverloads constructor(
@@ -48,11 +50,12 @@ open class IndicatorButton @JvmOverloads constructor(
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
 
-        size = Math.min(measuredWidth, measuredHeight)
+        size = min(measuredWidth, measuredHeight)
 
         setMeasuredDimension(size, size)
     }
 
+    @SuppressLint("DrawAllocation")
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
 
@@ -62,7 +65,7 @@ open class IndicatorButton @JvmOverloads constructor(
         shape.shape = GradientDrawable.RECTANGLE
         shape.setColor(Color.GREEN)
         shape.setStroke(10, Color.GRAY)
-        shape.setCornerRadius(radius)
+        shape.cornerRadius = radius
         background = shape
     }
 }

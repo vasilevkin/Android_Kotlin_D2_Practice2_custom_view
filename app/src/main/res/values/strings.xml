@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Custom view</string>
+    <string name="left_button_title"><![CDATA[Enable ->]]></string>
+    <string name="right_button_title">Smile / Sad</string>
 </resources>

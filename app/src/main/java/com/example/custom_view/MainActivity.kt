@@ -1,19 +1,20 @@
 package com.example.custom_view
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
-
+@SuppressLint("SetTextI18n")
 class MainActivity : AppCompatActivity(), View.OnTouchListener {
 
-    var x = 0f
-    var y = 0f
-    var sDown: String? = null
-    var sMove: String? = null
-    var sUp: String? = null
+    private var x = 0f
+    private var y = 0f
+    private var sDown: String? = null
+    private var sMove: String? = null
+    private var sUp: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener {
         left_toggle_button.setOnTouchListener { view, event ->
             if (event.action == MotionEvent.ACTION_UP) {
                 right_checkable_button.isEnabled = !right_checkable_button.isEnabled
-                state_text_view.setText("left_toggle_button                   " + "          " + "MotionEvent == ACTION_UP")
+                state_text_view.text = "left_toggle_button                   " + "          " + "MotionEvent == ACTION_UP"
             }
             return@setOnTouchListener true
         }
@@ -30,13 +31,14 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener {
         right_checkable_button.setOnTouchListener(this)
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onTouch(v: View?, event: MotionEvent?): Boolean {
-        x = event?.x?.toFloat() ?: 0f
-        y = event?.y?.toFloat() ?: 0f
+        x = event?.x ?: 0f
+        y = event?.y ?: 0f
 
         when (event?.action) {
             MotionEvent.ACTION_DOWN -> {
-                sDown = "Down: $x,$y" + "        " + "MotionEvent == ACTION_DOWN"
+                sDown = "Down: $x,$y        MotionEvent == ACTION_DOWN"
                 sMove = ""
                 sUp = ""
             }
@@ -58,7 +60,7 @@ class MainActivity : AppCompatActivity(), View.OnTouchListener {
                     "                           " + "          " + "MotionEvent == ACTION_CANCEL"
             }
         }
-        state_text_view.setText(sDown.toString() + "\n" + sMove + "\n" + sUp)
+        state_text_view.text = sDown.toString() + "\n" + sMove + "\n" + sUp
         return true
     }
 }
