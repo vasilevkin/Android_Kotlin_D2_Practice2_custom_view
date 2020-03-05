@@ -43,20 +43,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.example.custom_view.RoundFaceView
-        android:layout_width="150dp"
-        android:layout_height="200dp"
-        android:layout_margin="4dp"
-        android:elevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <com.example.custom_view.RoundFaceView
-        android:layout_width="150dp"
-        android:layout_height="200dp"
-        android:layout_margin="4dp"
-        android:elevation="10dp"
+    <com.example.custom_view.IndicatorRadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center_horizontal"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.example.custom_view.RadioIndicatorButton
+            android:layout_width="@dimen/radio_indicator_button_size"
+            android:layout_height="@dimen/radio_indicator_button_size"
+            android:layout_margin="@dimen/radio_indicator_button_margin"
+            app:icon="@drawable/ic_trending_up_black_24dp" />
+
+        <com.example.custom_view.RadioIndicatorButton
+            android:layout_width="@dimen/radio_indicator_button_size"
+            android:layout_height="@dimen/radio_indicator_button_size"
+            android:layout_margin="@dimen/radio_indicator_button_margin"
+            app:icon="@drawable/ic_check_circle_black_24dp" />
+
+        <com.example.custom_view.RadioIndicatorButton
+            android:layout_width="@dimen/radio_indicator_button_size"
+            android:layout_height="@dimen/radio_indicator_button_size"
+            android:layout_margin="@dimen/radio_indicator_button_margin"
+            app:icon="@drawable/ic_crop_square_black_24dp" />
+
+    </com.example.custom_view.IndicatorRadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
