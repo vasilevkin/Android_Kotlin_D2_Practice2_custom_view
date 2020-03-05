@@ -2,7 +2,7 @@
 Custom reusable view.
 
 <table>
-<tbody>
+<tbody style="display:none">
 <tr>
 <td>
 <img src="https://github.com/vasilevkin/Android_Kotlin_D2_Practice2_custom_view/blob/practice2/_screenshots/Screenshot%202020-03-05%20at%2011.12.41.png" width="200">
