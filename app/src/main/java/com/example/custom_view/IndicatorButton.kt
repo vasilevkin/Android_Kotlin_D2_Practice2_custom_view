@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.indicator_button.view.*
 import kotlin.math.min
 
 
+@Suppress("LeakingThis")
 open class IndicatorButton @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
