@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundFaceView">
+        <attr name="faceColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="borderColor" format="color" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="state" format="enum">
+            <enum name="off" value="0" />
+            <enum name="on" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="IndicatorButton">
+        <attr name="icon" format="reference" />
+        <attr name="android:enabled" />
+        <attr name="android:text" />
+    </declare-styleable>
+
+    <declare-styleable name="CheckableIndicatorButton">
+        <attr name="android:checked" />
+    </declare-styleable>
+</resources>

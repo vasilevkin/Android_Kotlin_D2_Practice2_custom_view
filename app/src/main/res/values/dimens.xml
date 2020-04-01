@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="stroke_width">2dp</dimen>
+    <dimen name="corner_radius">32dp</dimen>
+    <dimen name="radio_indicator_button_size">110dp</dimen>
+    <dimen name="radio_indicator_button_margin">12dp</dimen>
+</resources>
